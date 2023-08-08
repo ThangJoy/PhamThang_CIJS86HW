@@ -37,11 +37,10 @@ const Cart = (props) => {
 
   return (
     <div className="cart-modal-backdrop" onClick={onCloseCart}>
-      
       <div className="cart-modal-content" onClick={(e) => e.stopPropagation()}>
-      <span className="close-btn" onClick={onCloseCart}>
-              &times;
-      </span>
+        <span className="close-btn" onClick={onCloseCart}>
+          &times;
+        </span>
         <h2>Giỏ hàng</h2>
         {cartItems.length === 0 ? (
           <p>Giỏ hàng trống</p>

@@ -1,7 +1,19 @@
 import React, { useState } from "react";
 
 const Product = (props) => {
-  const { img, name, price, discount, chip, sizeScreen, ram, rom, setCartItems, cartItems, info } = props;
+  const {
+    img,
+    name,
+    price,
+    discount,
+    chip,
+    sizeScreen,
+    ram,
+    rom,
+    setCartItems,
+    cartItems,
+    info,
+  } = props;
   const [showModal, setShowModal] = useState(false); // State để điều khiển hiển thị modal
 
   // Hàm để mở modal
@@ -15,9 +27,12 @@ const Product = (props) => {
   };
 
   const handlePrice = (price) => {
-    let newPrice = price.split('').filter(char=>!isNaN(char)).join('');
+    let newPrice = price
+      .split("")
+      .filter((char) => !isNaN(char))
+      .join("");
     return newPrice;
-  }
+  };
   // Chức năng thêm sản phẩm vào giỏ hàng
   const addToCart = () => {
     // Kiểm tra xem sản phẩm đã có trong giỏ hàng
@@ -48,36 +63,33 @@ const Product = (props) => {
         </div>
         {discount && (
           <div className="discount">
-            
             <span className="real-price">
-              {Math.trunc(Number(
-                (Number(handlePrice(price)) * (1 + Number(discount)/100))
-              )).toLocaleString()}đ
+              {Math.trunc(
+                Number(
+                  Number(handlePrice(price)) * (1 + Number(discount) / 100)
+                )
+              ).toLocaleString()}
+              đ
             </span>
 
             <span className="product-discount">-{discount}%</span>
           </div>
         )}
-          
-            {
-              chip && (<div className="chip-info">Chipset: {chip}</div>)
-            } 
-            {
-              sizeScreen && (<div className="screen-info">Kích thước màn hình: {sizeScreen}</div>)
-            } 
-            {
-              ram && (<div className="ram-info">RAM: {ram}GB</div>)
-            } 
-            {
-              rom && (<div className="rom-info">Bộ nhớ trong: {rom}GB</div>)
-            } 
-          {info &&(<div className="compare">
-            <span><button className="compare-btn">+</button></span>
+
+        {chip && <div className="chip-info">Chipset: {chip}</div>}
+        {sizeScreen && (
+          <div className="screen-info">Kích thước màn hình: {sizeScreen}</div>
+        )}
+        {ram && <div className="ram-info">RAM: {ram}GB</div>}
+        {rom && <div className="rom-info">Bộ nhớ trong: {rom}GB</div>}
+        {info && (
+          <div className="compare">
+            <span>
+              <button className="compare-btn">+</button>
+            </span>
             <span>Thêm vào so sánh</span>
-            
-            
-          </div>)}
-        
+          </div>
+        )}
       </div>
 
       {/* Modal chi tiết sản phẩm */}
@@ -99,7 +111,6 @@ const Product = (props) => {
                   </div>
                   {discount && (
                     <div className="modal-discount">
-                      
                       <span className="modal-real-price">
                         {Number(
                           (Number(price) * (100 + Number(discount))) / 100
