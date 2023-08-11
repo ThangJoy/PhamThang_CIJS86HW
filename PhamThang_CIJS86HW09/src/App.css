@@ -1,0 +1,156 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  box-sizing: border-box;
+}
+
+.app {
+  max-width: 550px;
+  margin: 50px auto;
+  background-color: #BE494B;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: solid 10px #AE957D
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+p {
+  text-align: center;
+  font-size: 14px;
+}
+
+span.checked {
+  text-decoration: none;
+}
+
+li.checked {
+  background-color: #888;
+  color: black
+}
+
+.input-group{
+  border: 20px solid #E1C1AC;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 0px;
+  border: solid 2px black;
+  font-size: 16px;
+  outline: none;
+  color: black;
+  
+}
+
+input[type="text"]:focus {
+  border-color: #AE957D;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; 
+  border: 2px solid #ccc;
+  margin-right: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.list-group-item{
+  position: relative;
+  background-color: #E1C1AC;
+}
+
+.list-group-item.checked{
+  background-color: #352323;
+  border: none;
+}
+
+.btn-del{
+  position: absolute;
+  right: 10px;
+}
+
+.btn-area{
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.input-group-append{
+  position: absolute;
+  right: 10px;
+}
+
+.btn-add{
+  background-color: #34342D;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  width: 120%;
+}
+
+.btn-add:hover{
+  background-color: #EE5855;
+  border: 1px solid white;
+}
+
+.btn-del{
+  font-size: 12px;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 0px;
+  display: inline;
+  border: none;
+}
+
+.btn-outline-secondary{
+  color: black;
+  background-color: #AE957D;
+  margin-right: 5px;
+  border: none;
+  background-color: #8E3233;
+  color: #6E161C;
+  font-weight: bold;
+  border-radius: 0px;
+}
+
+.btn-outline-secondary.active {
+  border: 1px solid white;
+  background-color: #EE5855;
+}
+
+.mb-4{
+  color:white;
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
