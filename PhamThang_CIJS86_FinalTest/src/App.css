@@ -1,0 +1,172 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.app {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: transparent;
+  padding: 30px;
+  border-radius: 8px;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  border: none;
+}
+
+h1 {
+  font-weight: bold;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+p {
+  text-align: center;
+  font-size: 14px;
+}
+
+span.checked {
+  text-decoration: line-through;
+  color: black;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: solid 2px #ccc;
+  font-size: 16px;
+  outline: none;
+  color: black;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  margin-right: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+input[type="text"]::placeholder {
+  color: gray;
+  opacity: 0.6;
+}
+
+.list-group-item {
+  position: relative;
+  border: none;
+}
+
+.list-group-item.checked {
+  border: none;
+}
+
+.btn-del {
+  position: absolute;
+  right: 10px;
+}
+
+.btn-del {
+  font-size: 12px;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 0px;
+  display: inline;
+  border: none;
+}
+
+.mb-4 {
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+.filter-nav {
+  margin-bottom: 20px;
+}
+
+.filter-button {
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  color: #333;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s, border-bottom-color 0.3s;
+  position: relative;
+}
+
+.filter-button.active::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #007bff;
+  border-radius: 4px;
+}
+
+.nav {
+  position: relative;
+
+  border-bottom: solid 1px #ccc;
+  height: 45px;
+}
+.btn-all {
+  position: absolute;
+  left: 50px;
+}
+.btn-act {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.btn-comp {
+  position: absolute;
+  right: 50px;
+}
+.text-right {
+  position: relative;
+}
+.text-right .btn {
+  position: absolute;
+  right: 0px;
+}
+
+.btn-primary {
+  border-radius: 12px;
+}
